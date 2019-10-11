@@ -54,3 +54,7 @@ Route::get('/add-to-wishlist', function () {
 Route::get('/order-complete', function () {
     return view('theme.store.order-complete');
 });
+
+Route::get('products', 'ProductController@index')->name('products.show');
+
+Route::get('products/{product}', 'ProductController@show')->name('products.show');

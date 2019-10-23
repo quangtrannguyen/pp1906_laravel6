@@ -58,3 +58,22 @@ Route::get('/order-complete', function () {
 Route::get('products', 'ProductController@index')->name('products.show');
 
 Route::get('products/{product}', 'ProductController@show')->name('products.show');
+
+Route::get('/admin', function() {
+    return view('admin.dashboard');
+})->name('dashboard')->middleware('auth');
+
+
+Route::middleware(['auth'])-> prefix('admin')-> name('admin.')-> namespace('Admin')->group(function () {
+    // Route::get('/', function () {
+    //     // Uses first & second Middleware
+    // });
+
+    // Route::get('user/profile', function () {
+    //     // Uses first & second Middleware
+    // });
+    // Route::get('products', 'ProductController@index')->name('products.index');
+    Route::resource('products', 'ProductController');
+
+
+});

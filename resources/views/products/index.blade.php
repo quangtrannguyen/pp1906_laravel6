@@ -1,58 +1,16 @@
 @extends('layouts.store')
 @section('content')
-quang
-		<!-- <aside id="colorlib-hero">
+<aside id="colorlib-hero" class="breadcrumbs">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(theme/images/img_bg_1.jpg);">
+			   	<li style="background-image: url(theme/images/cover-img-1.jpg);">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 col-md-pull-2 col-sm-12 col-xs-12 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-					   					<h1 class="head-1">Men's</h1>
-					   					<h2 class="head-2">Jeans</h2>
-					   					<h2 class="head-3">Collection</h2>
-					   					<p class="category"><span>New stylish shirts, pants &amp; Accessories</span></p>
-					   					<p><a href="#" class="btn btn-primary">Shop Collection</a></p>
-				   					</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(theme/images/img_bg_2.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 col-md-pull-2 col-sm-12 col-xs-12 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-					   					<h1 class="head-1">Huge</h1>
-					   					<h2 class="head-2">Sale</h2>
-					   					<h2 class="head-3">45% off</h2>
-					   					<p class="category"><span>New stylish shirts, pants &amp; Accessories</span></p>
-					   					<p><a href="#" class="btn btn-primary">Shop Collection</a></p>
-				   					</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(theme/images/img_bg_3.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-					   					<h1 class="head-1">New</h1>
-					   					<h2 class="head-2">Arrival</h2>
-					   					<h2 class="head-3">up to 30% off</h2>
-					   					<p class="category"><span>New stylish shirts, pants &amp; Accessories</span></p>
-					   					<p><a href="#" class="btn btn-primary">Shop Collection</a></p>
-				   					</div>
+				   			<div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<h1>Products</h1>
+				   					<h2 class="bread"><span><a href="index.html">Home</a></span> <span>Shop</span></h2>
 				   				</div>
 				   			</div>
 				   		</div>
@@ -61,153 +19,395 @@ quang
 			  	</ul>
 		  	</div>
 		</aside>
-		<div id="colorlib-featured-product">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<a href="shop.html" class="f-product-1" style="background-image: url(theme/images/item-1.jpg);">
-							<div class="desc">
-								<h2>Fahion <br>for <br>men</h2>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-6">
-						<div class="row">
-							<div class="col-md-6">
-								<a href="" class="f-product-2" style="background-image: url(theme/images/item-2.jpg);">
-									<div class="desc">
-										<h2>New <br>Arrival <br>Dress</h2>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-6">
-								<a href="" class="f-product-2" style="background-image: url(theme/images/item-4.jpg);">
-									<div class="desc">
-										<h2>Sale <br>20% <br>off</h2>
-									</div>
-								</a>
-							</div>
-							<div class="col-md-12">
-								<a href="" class="f-product-2" style="background-image: url(theme/images/item-3.jpg);">
-									<div class="desc">
-										<h2>Shoes <br>for <br>men</h2>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+
 		<div class="colorlib-shop">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading">
-						<h2><span>New Arrival</span></h2>
-						<p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-5.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-6.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-7.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-8.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="colorlib-intro" class="colorlib-intro" style="background-image: url(theme/images/cover-img-1.jpg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="intro-desc">
-							<div class="text-salebox">
-								<div class="text-lefts">
-									<div class="sale-box">
-										<div class="sale-box-top">
-											<h2 class="number">45</h2>
-											<span class="sup-1">%</span>
-											<span class="sup-2">Off</span>
+					<div class="col-md-10 col-md-push-2">
+						<div class="row row-pb-lg">
+							@foreach ($products as $product)
+								<div class="col-md-4 text-center">
+									<div class="product-entry">
+										<div class="product-img" style="background-image: url(theme/images/item-5.jpg);">
+											<p class="tag"><span class="new">New</span></p>
+											<div class="cart">
+												<p>
+													<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+													<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+													<span><a href="#"><i class="icon-heart3"></i></a></span>
+													<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+												</p>
+											</div>
 										</div>
-										<h2 class="text-sale">Sale</h2>
+										<div class="desc">
+											<h3><a href="product-detail.html">{{ $product->name}}</a></h3>
+											<p class="price"><span>${{ $product->price }}</span></p>
+										</div>
 									</div>
 								</div>
-								<div class="text-rights">
-									<h3 class="title">Just hurry up limited offer!</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-									<p><a href="shop.html" class="btn btn-primary">Shop Now</a> <a href="#" class="btn btn-primary btn-outline">Read more</a></p>
+							@endforeach
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-6.jpg);">
+										<p class="tag"><span class="sale">Sale</span></p>
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$199.00</span> <span class="sale">$300.00</span> </p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-7.jpg);">
+										<p class="tag"><span class="new">New</span></p>
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$300.00</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-8.jpg);">
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$300.00</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-9.jpg);">
+										<p class="tag"><span class="sale">Sale</span></p>
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$199.00</span> <span class="sale">$300.00</span> </p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-10.jpg);">
+										<p class="tag"><span class="new">New</span></p>
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$300.00</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-11.jpg);">
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$300.00</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-12.jpg);">
+										<p class="tag"><span class="new">New</span></p>
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$300.00</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-13.jpg);">
+										<p class="tag"><span class="new">New</span></p>
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$300.00</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-14.jpg);">
+										<p class="tag"><span class="new">New</span></p>
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$300.00</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-15.jpg);">
+										<p class="tag"><span class="new">New</span></p>
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$300.00</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center">
+								<div class="product-entry">
+									<div class="product-img" style="background-image: url(theme/images/item-16.jpg);">
+										<p class="tag"><span class="new">New</span></p>
+										<div class="cart">
+											<p>
+												<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
+												<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
+												<span><a href="#"><i class="icon-heart3"></i></a></span>
+												<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+											</p>
+										</div>
+									</div>
+									<div class="desc">
+										<h3><a href="product-detail.html">Floral Dress</a></h3>
+										<p class="price"><span>$300.00</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="pagination">
+									<li class="disabled"><a href="#">&laquo;</a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">&raquo;</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-md-pull-10">
+						<div class="sidebar">
+							<div class="side">
+								<h2>Categories</h2>
+								<div class="fancy-collapse-panel">
+			                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			                     <div class="panel panel-default">
+			                         <div class="panel-heading" role="tab" id="headingOne">
+			                             <h4 class="panel-title">
+			                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Men
+			                                 </a>
+			                             </h4>
+			                         </div>
+			                         <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+			                             <div class="panel-body">
+			                                 <ul>
+			                                 	<li><a href="#">Jeans</a></li>
+			                                 	<li><a href="#">T-Shirt</a></li>
+			                                 	<li><a href="#">Jacket</a></li>
+			                                 	<li><a href="#">Shoes</a></li>
+			                                 </ul>
+			                             </div>
+			                         </div>
+			                     </div>
+			                     <div class="panel panel-default">
+			                         <div class="panel-heading" role="tab" id="headingTwo">
+			                             <h4 class="panel-title">
+			                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Women
+			                                 </a>
+			                             </h4>
+			                         </div>
+			                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+			                             <div class="panel-body">
+			                                <ul>
+			                                 	<li><a href="#">Jeans</a></li>
+			                                 	<li><a href="#">T-Shirt</a></li>
+			                                 	<li><a href="#">Jacket</a></li>
+			                                 	<li><a href="#">Shoes</a></li>
+			                                 </ul>
+			                             </div>
+			                         </div>
+			                     </div>
+			                     <div class="panel panel-default">
+			                         <div class="panel-heading" role="tab" id="headingThree">
+			                             <h4 class="panel-title">
+			                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Jewelry
+			                                 </a>
+			                             </h4>
+			                         </div>
+			                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+			                             <div class="panel-body">
+			                                <ul>
+			                                 	<li><a href="#">Jeans</a></li>
+			                                 	<li><a href="#">T-Shirt</a></li>
+			                                 	<li><a href="#">Jacket</a></li>
+			                                 	<li><a href="#">Shoes</a></li>
+			                                 </ul>
+			                             </div>
+			                         </div>
+			                     </div>
+			                     <div class="panel panel-default">
+			                         <div class="panel-heading" role="tab" id="headingFour">
+			                             <h4 class="panel-title">
+			                                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">Jewelry
+			                                 </a>
+			                             </h4>
+			                         </div>
+			                         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+			                             <div class="panel-body">
+			                                <ul>
+			                                 	<li><a href="#">Jeans</a></li>
+			                                 	<li><a href="#">T-Shirt</a></li>
+			                                 	<li><a href="#">Jacket</a></li>
+			                                 	<li><a href="#">Shoes</a></li>
+			                                 </ul>
+			                             </div>
+			                         </div>
+			                     </div>
+			                  </div>
+			               </div>
+							</div>
+							<div class="side">
+								<h2>Price Range</h2>
+								<form method="post" class="colorlib-form-2">
+				              	<div class="row">
+				                <div class="col-md-12">
+				                  <div class="form-group">
+				                    <label for="guests">Price from:</label>
+				                    <div class="form-field">
+				                      <i class="icon icon-arrow-down3"></i>
+				                      <select name="people" id="people" class="form-control">
+				                        <option value="#">1</option>
+				                        <option value="#">200</option>
+				                        <option value="#">300</option>
+				                        <option value="#">400</option>
+				                        <option value="#">1000</option>
+				                      </select>
+				                    </div>
+				                  </div>
+				                </div>
+				                <div class="col-md-12">
+				                  <div class="form-group">
+				                    <label for="guests">Price to:</label>
+				                    <div class="form-field">
+				                      <i class="icon icon-arrow-down3"></i>
+				                      <select name="people" id="people" class="form-control">
+				                        <option value="#">2000</option>
+				                        <option value="#">4000</option>
+				                        <option value="#">6000</option>
+				                        <option value="#">8000</option>
+				                        <option value="#">10000</option>
+				                      </select>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </form>
+							</div>
+							<div class="side">
+								<h2>Color</h2>
+								<div class="color-wrap">
+									<p class="color-desc">
+										<a href="#" class="color color-1"></a>
+										<a href="#" class="color color-2"></a>
+										<a href="#" class="color color-3"></a>
+										<a href="#" class="color color-4"></a>
+										<a href="#" class="color color-5"></a>
+									</p>
+								</div>
+							</div>
+							<div class="side">
+								<h2>Size</h2>
+								<div class="size-wrap">
+									<p class="size-desc">
+										<a href="#" class="size size-1">xs</a>
+										<a href="#" class="size size-2">s</a>
+										<a href="#" class="size size-3">m</a>
+										<a href="#" class="size size-4">l</a>
+										<a href="#" class="size size-5">xl</a>
+										<a href="#" class="size size-5">xxl</a>
+									</p>
 								</div>
 							</div>
 						</div>
@@ -216,264 +416,6 @@ quang
 			</div>
 		</div>
 
-		<div class="colorlib-shop">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading">
-						<h2><span>Our Products</span></h2>
-						<p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-9.jpg);">
-								<p class="tag"><span class="sale">Sale</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$199.00</span> <span class="sale">$300.00</span> </p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-10.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-11.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-12.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-13.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-14.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-15.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="product-entry">
-							<div class="product-img" style="background-image: url(theme/images/item-16.jpg);">
-								<p class="tag"><span class="new">New</span></p>
-								<div class="cart">
-									<p>
-										<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span> 
-										<span><a href="product-detail.html"><i class="icon-eye"></i></a></span> 
-										<span><a href="#"><i class="icon-heart3"></i></a></span>
-										<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
-									</p>
-								</div>
-							</div>
-							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
-								<p class="price"><span>$300.00</span></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div id="colorlib-testimony" class="colorlib-light-grey">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading">
-						<h2><span>Our Satisfied Customer says</span></h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">						
-						<div class="owl-carousel2">
-							<div class="item">
-								<div class="testimony text-center">
-									<span class="img-user" style="background-image: url(theme/images/person1.jpg);"></span>
-									<span class="user">Alysha Myers</span>
-									<small>Miami Florida, USA</small>
-									<blockquote>
-										<p>" A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-									</blockquote>
-								</div>
-							</div>
-							<div class="item">
-								<div class="testimony text-center">
-									<span class="img-user" style="background-image: url(theme/images/person2.jpg);"></span>
-									<span class="user">James Fisher</span>
-									<small>New York, USA</small>
-									<blockquote>
-										<p>One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-									</blockquote>
-								</div>
-							</div>
-							<div class="item">
-								<div class="testimony text-center">
-									<span class="img-user" style="background-image: url(theme/images/person3.jpg);"></span>
-									<span class="user">Jacob Webb</span>
-									<small>Athens, Greece</small>
-									<blockquote>
-										<p>Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-									</blockquote>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-		</div>
-
-		<div class="colorlib-blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading">
-						<h2>Recent Blog</h2>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<article class="article-entry">
-							<a href="blog.html" class="blog-img" style="background-image: url(theme/images/blog-1.jpg);"></a>
-							<div class="desc">
-								<p class="meta"><span class="day">02</span><span class="month">Mar</span></p>
-								<p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
-								<h2><a href="blog.html">Openning Branches</a></h2>
-								<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-							</div>
-						</article>
-					</div>
-					<div class="col-md-4">
-						<article class="article-entry">
-							<a href="blog.html" class="blog-img" style="background-image: url(theme/images/blog-2.jpg);"></a>
-							<div class="desc">
-								<p class="meta"><span class="day">02</span><span class="month">Mar</span></p>
-								<p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
-								<h2><a href="blog.html">Openning Branches</a></h2>
-								<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-							</div>
-						</article>
-					</div>
-					<div class="col-md-4">
-						<article class="article-entry">
-							<a href="blog.html" class="blog-img" style="background-image: url(theme/images/blog-3.jpg);"></a>
-							<div class="desc">
-								<p class="meta"><span class="day">02</span><span class="month">Mar</span></p>
-								<p class="admin"><span>Posted by:</span> <span>Noah Henderson</span></p>
-								<h2><a href="blog.html">Openning Branches</a></h2>
-								<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
-							</div>
-						</article>
-					</div>
-				</div>
-			</div>
-		</div> -->
-
-		babababababa
-		
+	{{$products->links()}}
 @endsection		
 

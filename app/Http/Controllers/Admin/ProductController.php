@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductRequest;
 use App\Models\Products;
 
 class ProductController extends Controller
@@ -16,7 +16,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('admin.products.index');
+        $products = Products::all();
+
+
+        return view('admin.products.index', ['products' => $products]);
+
     }
 
     /**
@@ -27,6 +31,7 @@ class ProductController extends Controller
     public function create()
     {
         //
+        return view('admin.products.create');
     }
 
     /**
@@ -35,9 +40,22 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
         //
+        $data = $request->only([
+            'name',
+            'content',
+            'quantity',
+            'price',
+        ]);
+
+        try {
+            $product = Products::create($data);
+        } catch (\Exception $e) {
+            return back()->withInput($data)->with('status', 'Create failed!');
+        }
+        return redirect('/admin/products')->with('status', 'Create success!'); 
     }
 
     /**
@@ -64,6 +82,9 @@ class ProductController extends Controller
     public function edit($id)
     {
         //
+        $product = Products::findOrFail($id);
+        $data = ['product' => $product];
+        return view('admin.products.edit', $data);
     }
 
     /**
@@ -73,9 +94,24 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProductRequest $request, $id)
     {
         //
+        $data = $request->only([
+            'name',
+            'content',
+            'quantity',
+            'price',
+        ]);
+
+        $product = Products::findOrFail($id);
+
+        try {
+            $product->update($data);
+        } catch (\Exception $e) {
+            return back()->withInput($data)->with('status', 'Update failed!');
+        }
+        return redirect('admin/products')->with('status', 'Update success!'); 
     }
 
     /**
@@ -87,5 +123,13 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
+        $product = Products::findOrFail($id);
+        try {
+            $product->delete();
+        } catch (\Exception $e) {
+            return back()->with($data)->with('status', 'Delete failed!');
+        }
+        return redirect('admin/products')->with('status', 'Delete success!'); 
+
     }
 }

@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class ProductRequest extends FormRequest
 {
@@ -13,7 +15,10 @@ class ProductRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        if (Auth::check()) {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -25,10 +30,22 @@ class ProductRequest extends FormRequest
     {
         return [
             //
-            'name' => 'required|unique:products|max:255',
+            // 'name' => 'required|unique:products|max:255',
+            'name' => [
+                'required',
+                Rule::unique('products')->ignore($this->product),
+
+            ],
             'content' => 'nullable',
-            'quantity' => 'required|integer|max:255',
+            'quantity' => 'required|integer',
             'price' => 'required|integer',
+        ];
+    }
+
+    //
+    public function messages() {
+        return [
+            'name.unique' => 'SAN PHAM NAY DA TON TAI'
         ];
     }
 }

@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\ProductRequest;
-use App\Models\Products;
+use App\Http\Requests\CategoryRequest;
+use App\Models\Category;
 
-class ProductController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +16,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Products::all();
+        $category = Category::all();
+        $categories = Category::orderBy('created_at', 'desc')->get();
 
 
-        return view('admin.products.index', ['products' => $products]);
+        return view('admin.categories.index', ['category' => $category]);
 
     }
 
@@ -31,8 +32,9 @@ class ProductController extends Controller
     public function create()
     {
         //
+        $categories = Category::all();
 
-        return view('admin.products.create');
+        return view('admin.categories.create', compact('categories'));
     }
 
     /**
@@ -41,27 +43,24 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductRequest $request)
+    public function store(CategoryRequest $request)
     {
+        
         //
         $data = $request->only([
             'name',
-            'content',
-            'quantity',
-            'price',
+            'parent_id',
         ]);
 
-
         $data['user_id'] = auth()->id();
-
-
+        
         try {
-            $product = Products::create($data);
+            $category = Category::create($data);
         } catch (\Exception $e) {
             \Log::error($e);
             return back()->withInput($data)->with('status', 'Create failed!');
         }
-        return redirect('/admin/products' . $product->id)->with('status', 'Create success!'); 
+        return redirect('/admin/categories')->with('status', 'Create success!'); 
     }
 
     /**
@@ -72,11 +71,11 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = Products::find($id);
-        $data = ['product' => $product];
+        $category = Category::find($id);
+        $data = ['category' => $category];
         //$data = compact('product');
         //dd($product);
-        return view('products.show', $data);
+        return view('categories.show', $data);
     }
 
     /**
@@ -88,9 +87,14 @@ class ProductController extends Controller
     public function edit($id)
     {
         //
-        $product = Products::findOrFail($id);
-        $data = ['product' => $product];
-        return view('admin.products.edit', $data);
+        $category = Category::findOrFail($id);
+        $categories = Category::all();
+        $data = [
+            'categories' => $categories,
+            'category' => $category,
+        ];
+
+        return view('admin.categories.edit', $data);
     }
 
     /**
@@ -100,24 +104,22 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProductRequest $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
         //
         $data = $request->only([
             'name',
-            'content',
-            'quantity',
-            'price',
+            'parent_id',
         ]);
 
-        $product = Products::findOrFail($id);
+        $category = Category::findOrFail($id);
 
         try {
-            $product->update($data);
+            $category->update($data);
         } catch (\Exception $e) {
             return back()->withInput($data)->with('status', 'Update failed!');
         }
-        return redirect('admin/products')->with('status', 'Update success!'); 
+        return redirect('admin/categories')->with('status', 'Update success!'); 
     }
 
     /**
@@ -129,13 +131,13 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
-        $product = Products::findOrFail($id);
+        $category = Category::findOrFail($id);
         try {
-            $product->delete();
+            $category->delete();
         } catch (\Exception $e) {
             return back()->with($data)->with('status', 'Delete failed!');
         }
-        return redirect('admin/products')->with('status', 'Delete success!'); 
+        return redirect('admin/categories')->with('status', 'Delete success!'); 
 
     }
 }

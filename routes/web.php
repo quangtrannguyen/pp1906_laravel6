@@ -41,6 +41,6 @@ Route::middleware(['auth'])-> prefix('admin')-> name('admin.')-> namespace('Admi
     // });
     // Route::get('products', 'ProductController@index')->name('products.index');
     Route::resource('products', 'ProductController');
-
-
+    Route::resource('categories', 'CategoryController');
 });
+    

@@ -29,7 +29,7 @@ class ProductController extends Controller
     public function create()
     {
         //
-        return view('products.create');
+        return view('admin.products.create');
     }
 
     /**
@@ -48,9 +48,14 @@ class ProductController extends Controller
             'price',
         ]);
 
+        $data['user_id'] = auth::id();
+
+        dd($data);
+
         try {
             $product = Products::create($data);
         } catch (\Exception $e) {
+            \Log::error($e);
             return back()->withInput($data)->with('status', 'Create failed!');
         }
         return redirect('products/' .$product->id)->with('status', 'Create success!'); 

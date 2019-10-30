@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Products extends Model
+class Category extends Model
 {
     //
     //
@@ -15,14 +15,19 @@ class Products extends Model
      */
     protected $fillable = [
         'name',
-        'content',
-        'quantity',
-        'price',
+        'parent_id',
         'user_id',
     ];
 
     //
-    public function user() {
+    public function parent()
+    {
+        return $this->belongsTo('App\Models\Category');
+    }
+
+    //
+    public function user(){
         return $this->belongsTo('App\User');
     }
+
 }

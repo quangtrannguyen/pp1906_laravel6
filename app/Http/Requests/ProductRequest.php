@@ -33,8 +33,8 @@ class ProductRequest extends FormRequest
             // 'name' => 'required|unique:products|max:255',
             'name' => [
                 'required',
+                'max:255',
                 Rule::unique('products')->ignore($this->product),
-
             ],
             'content' => 'nullable',
             'quantity' => 'required|integer',

@@ -9,6 +9,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Content</th>
+                <th>Category</th>
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Created by</th>
@@ -21,6 +22,7 @@
                 <td>{{ $product->id }}</td>
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->content }}</td>
+                <td>{{ $product->category ? $product->category->name : '' }}</td>
                 <td>{{ $product->quantity }}</td>
                 <td>{{ $product->price }}</td>
                 <td>{{ $product->user ? $product->user->name : ''}}</td>
@@ -47,8 +49,10 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Content</th>
+                <th>Category</th>
                 <th>Quantity</th>
                 <th>Price</th>
+                <th>Created by</th>
                 <th>Operator</th>
             </tr>
         </tfoot>

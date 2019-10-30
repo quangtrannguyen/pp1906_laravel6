@@ -49,6 +49,7 @@ class ProductController extends Controller
             'content',
             'quantity',
             'price',
+            'category_id',
         ]);
 
 
@@ -61,7 +62,7 @@ class ProductController extends Controller
             \Log::error($e);
             return back()->withInput($data)->with('status', 'Create failed!');
         }
-        return redirect('/admin/products' . $product->id)->with('status', 'Create success!'); 
+        return redirect('/admin/products')->with('status', 'Create success!'); 
     }
 
     /**

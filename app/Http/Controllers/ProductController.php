@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Products;
+use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -17,7 +18,7 @@ class ProductController extends Controller
         $products = Products::paginate(4);
 
 
-        return view('products.index', ['products' => $products]);
+        return view('products.index', compact('products'));
 
     }
 
@@ -29,7 +30,7 @@ class ProductController extends Controller
     public function create()
     {
         //
-        return view('admin.products.create');
+        return view('products.create');
     }
 
     /**
@@ -38,7 +39,7 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
         //
         $data = $request->only([
@@ -48,16 +49,16 @@ class ProductController extends Controller
             'price',
         ]);
 
-        $data['user_id'] = auth::id();
-
-        dd($data);
+        $data['user_id'] = auth()->id();
 
         try {
             $product = Products::create($data);
         } catch (\Exception $e) {
             \Log::error($e);
+
             return back()->withInput($data)->with('status', 'Create failed!');
         }
+
         return redirect('products/' .$product->id)->with('status', 'Create success!'); 
     }
 
@@ -94,7 +95,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProductRequest $request, $id)
     {
         //
     }
